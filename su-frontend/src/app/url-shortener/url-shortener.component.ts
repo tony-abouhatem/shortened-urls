@@ -21,7 +21,7 @@ export class URLShortenerComponent {
         }
       });
     } else {
-      this.openExternalLink = "";
+      this.openExternalLink = undefined;
     }
   }
 }

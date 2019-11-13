@@ -11,7 +11,7 @@
     </div>
   </form>
 
-  <div class="ui-g-12">
+  <div class="ui-g-12" *ngIf="openExternalLink">
     Link:
     <a target="_blank" [href]="openExternalLink">{{ openExternalLink }}</a>
   </div>

@@ -5,8 +5,9 @@ import { URLShortenerService } from "./url-shortener.service";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
+import * as faker from "faker";
 
-fdescribe("URLShortenerComponent", () => {
+describe("URLShortenerComponent", () => {
   let component: URLShortenerComponent;
   let fixture: ComponentFixture<URLShortenerComponent>;
 
@@ -28,5 +29,17 @@ fdescribe("URLShortenerComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  it("should ");
+  it("should remove link", () => {
+    component.openExternalLink = faker.internet.url();
+    component.register();
+    expect(component.openExternalLink).toBeUndefined();
+  });
+  it("link should be visible", () => {
+    let anchorTag = fixture.debugElement.nativeElement.querySelector("a");
+    expect(anchorTag).toBeNull();
+
+    component.openExternalLink = faker.internet.url();
+    anchorTag = fixture.debugElement.nativeElement.querySelector("a");
+    expect(anchorTag).toBeDefined();
+  });
 });
