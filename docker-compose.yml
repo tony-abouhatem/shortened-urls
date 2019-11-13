@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  app:
+    build: su-backend/
+    ports:
+      - "1337:1337"
+  api:
+    build: su-frontend/
+    ports:
+      - "80:4200"

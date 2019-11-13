@@ -1,0 +1,19 @@
+header {
+  background-image: url("/assets/body-img-url-shortener.jpeg");
+  min-height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: lightslategray;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 50px;
+}
+
+h1 {
+  margin-bottom: initial;
+}
+
+h3 {
+  margin-top: initial;
+}

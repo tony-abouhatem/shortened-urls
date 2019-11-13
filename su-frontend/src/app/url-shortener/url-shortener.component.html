@@ -1,0 +1,18 @@
+<div class="ui-g-12 ui-md-10 ui-md-offset-1 ui-fluid">
+  <form #form="ngForm" (submit)="register()" class="ui-g form-group">
+    <div class="ui-g-10 ui-sm-12">
+      <span class="ui-float-label">
+        <input type="url" pInputText [(ngModel)]="longURL" name="longURL" />
+        <label for="float-input">URL</label>
+      </span>
+    </div>
+    <div class="ui-g-2 ui-sm-offset-3 ui-sm-6">
+      <button class="ui-button-rounded" label="Make it short!" pButton></button>
+    </div>
+  </form>
+
+  <div class="ui-g-12">
+    Link:
+    <a target="_blank" [href]="openExternalLink">{{ openExternalLink }}</a>
+  </div>
+</div>
