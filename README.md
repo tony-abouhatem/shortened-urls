@@ -9,3 +9,11 @@
 - **FMT** formatting only (spacing...)
 - **MAK** repository related changes (e.g., changes in the ignore list)
 - **TEST** related to test code only.
+
+## Running
+
+Run the follow command at root of this project:
+`docker-compose up`
+
+then open:
+http://localhost
