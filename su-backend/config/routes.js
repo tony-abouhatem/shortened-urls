@@ -19,7 +19,8 @@ module.exports.routes = {
    ***************************************************************************/
 
   "POST /url/register": { action: "url/register" },
-  "GET /url/goto/:urlIdentifier": { action: "url/goto" }
+  "GET /url/goto/:urlIdentifier": { action: "url/goto" },
+  "GET /url/stats": { action: "url/statistics" }
 
   /***************************************************************************
    *                                                                          *

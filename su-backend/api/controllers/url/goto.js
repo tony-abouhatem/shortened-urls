@@ -21,8 +21,14 @@ module.exports = {
   },
 
   fn: async function(inputs, exits) {
-    var record = await URLModel.findOne({ id: inputs.urlIdentifier });
-    if (record) return exits.success(record.longURL);
+    const criteria = { id: inputs.urlIdentifier };
+    var record = await URLModel.findOne(criteria);
+    if (record) {
+      await URLModel.updateOne(criteria).set({
+        accessed_times: record.accessed_times + 1
+      });
+      return exits.success(record.longURL);
+    }
     return exits.notFound();
   }
 };
